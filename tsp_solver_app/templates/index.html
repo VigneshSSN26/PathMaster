@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TSP Solver</title>
+</head>
+<body>
+    <h1>TSP Solver</h1>
+    <form method="POST">
+        <label>Enter distances matrix (comma-separated rows):</label><br>
+        <textarea name="distances" rows="5" cols="50"></textarea><br>
+        <label>Method:</label>
+        <select name="method">
+            <option value="dp">Dynamic Programming</option>
+            <option value="nn">Nearest Neighbour</option>
+        </select><br>
+        <button type="submit">Solve</button>
+    </form>
+    {% if result %}
+        <h2>Result: {{ result }}</h2>
+    {% endif %}
+</body>
+</html>
